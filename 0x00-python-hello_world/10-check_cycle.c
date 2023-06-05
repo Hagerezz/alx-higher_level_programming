@@ -18,7 +18,7 @@ int check_cycle(listint_t *list)
 		if (idx == arr_size)
 		{
 			arr_size += 100;
-			arr_cpy = (listint_t **) malloc(arr_size * sizeof(lisint_t *));
+			arr_cpy = (listint_t **) malloc(arr_size * sizeof(listint_t *));
 			for (i = 0; i < idx; i++)
 			{
 				arr_cpy[idx] = arr[idx];
