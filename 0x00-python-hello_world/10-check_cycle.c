@@ -11,6 +11,8 @@ int check_cycle(listint_t *list)
 	int idx = 1, i = 0;
 	listint_t **arr, **arr_cpy;
 
+	if (list == NULL)
+		return (0);
 	arr = (listint_t **) malloc(arr_size * sizeof(listint_t *));
 	arr[0] = list;
 	while (list->next != NULL)
