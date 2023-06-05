@@ -7,8 +7,8 @@
  */
 int check_cycle(listint_t *list)
 {
-	size_t arr_size = 100;
-	int idx = 1, i;
+	int arr_size = 100;
+	int idx = 1, i = 0;
 	listint_t **arr, **arr_cpy;
 
 	arr = (listint_t **) malloc(arr_size * sizeof(listint_t *));
