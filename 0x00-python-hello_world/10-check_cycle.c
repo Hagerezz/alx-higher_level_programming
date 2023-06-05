@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * check_cycle - hecks if a singly linked list has a cycle in it
@@ -12,14 +11,14 @@ int check_cycle(listint_t *list)
 	int idx = 1, i;
 	listint_t **arr, **arr_cpy;
 
-	arr = malloc(arr_size * sizeof(listint_t*));
+	arr = malloc(arr_size * sizeof(listint_t *));
 	arr[0] = list;
 	while (list->next != NULL)
 	{
 		if (idx == arr_size)
 		{
 			arr_size += 100;
-			arr_cpy = malloc(arr_size * sizeof(lisint_t*));
+			arr_cpy = malloc(arr_size * sizeof(lisint_t *));
 			for (i = 0; i < idx; i++)
 			{
 				arr_cpy[idx] = arr[idx];
