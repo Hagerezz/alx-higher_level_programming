@@ -7,7 +7,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	int arr_size = 100;
+	int arr_size = 50;
 	int idx = 1, i = 0;
 	listint_t **arr, **arr_cpy;
 
