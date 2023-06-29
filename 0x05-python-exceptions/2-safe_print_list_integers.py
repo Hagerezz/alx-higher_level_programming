@@ -9,4 +9,4 @@ def safe_print_list_integers(my_list=[], x=0):
         print()
     except (IndexError, TypeError):
         pass
-    return count
+    return count if count <= len(my_list) else None
