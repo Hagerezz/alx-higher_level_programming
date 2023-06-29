@@ -26,5 +26,5 @@ def roman_to_int(roman_string):
                 else:
                     list_nu.append(rom_n.get(c))
                 last_ro = rom_n.get(c)
-    nu += to_subtract(list_nu)
+    nu += tosub(list_nu)
     return (nu)
