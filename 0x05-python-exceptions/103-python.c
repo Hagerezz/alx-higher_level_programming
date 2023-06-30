@@ -1,14 +1,14 @@
 #include <Python.h>
 
-void print_python_lis(PyObject *p);
-void print_python_byte(PyObject *p);
-void print_python_floa(PyObject *p);
+void print_python_list(PyObject *p);
+void print_python_bytes(PyObject *p);
+void print_python_float(PyObject *p);
 
 /**
- * print_python_lis - Print list
+ * print_python_list - Print list
  * @p: pointer
  */
-void print_python_lis(PyObject *p)
+void print_python_list(PyObject *p)
 {
 	Py_ssize_t size, alloc, i;
 	const char *type;
@@ -35,17 +35,17 @@ void print_python_lis(PyObject *p)
 		type = list->ob_item[i]->ob_type->tp_name;
 		printf("Element %ld: %s\n", i, type);
 		if (strcmp(type, "bytes") == 0)
-			print_python_byte(list->ob_item[i]);
+			print_python_bytes(list->ob_item[i]);
 		else if (strcmp(type, "float") == 0)
-			print_python_floa(list->ob_item[i]);
+			print_python_float(list->ob_item[i]);
 	}
 }
 
 /**
- * print_python_byte - Prints byte values
+ * print_python_bytes - Prints byte values
  * @p: pointer
  */
-void print_python_byte(PyObject *p)
+void print_python_bytes(PyObject *p)
 {
 	Py_ssize_t size, i;
 	PyBytesObject *bytes = (PyBytesObject *)p;
@@ -79,10 +79,10 @@ void print_python_byte(PyObject *p)
 }
 
 /**
- * print_python_floa - Prints float
+ * print_python_float - Prints float
  * @p: pointer
  */
-void print_python_floa(PyObject *p)
+void print_python_float(PyObject *p)
 {
 	char *buffer = NULL;
 
