@@ -1,3 +1,3 @@
 #!/bin/bash
-def copy_list(h):
-    return h.copy()
+def copy_list(l):
+    return l.copy()
