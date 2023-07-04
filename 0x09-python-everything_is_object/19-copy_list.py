@@ -1,4 +1,4 @@
 #!/bin/bash
-def copy_list(al):
-    new = al.copy()
+def copy_list(l):
+    new = l.copy()
     return new
