@@ -16,10 +16,10 @@ def nqueens(N):
     Returns:
         None
     """
-    if not isinstance(N, int):
-        raise TypeError("N must be a number")
-    if N < 4:
-        raise ValueError("N must be at least 4")
+    # if not isinstance(N, int):
+    #     raise TypeError("N must be a number")
+    # if N < 4:
+    #     raise ValueError("N must be at least 4")
 
     def is_valid(board, row, col):
         """
@@ -73,5 +73,8 @@ if __name__ == "__main__":
         N = int(sys.argv[1])
     except ValueError:
         print("N must be a number")
+        sys.exit(1)
+    if N < 4:
+        print("N must be at least 4")
         sys.exit(1)
     nqueens(N)
