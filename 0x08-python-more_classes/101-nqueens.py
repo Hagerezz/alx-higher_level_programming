@@ -34,7 +34,7 @@ def nqueens(N):
             bool: True if the position is valid, False otherwise.
         """
         for r, c in enumerate(board):
-            if c == col or r + c == row + col or r - c == row - col:
+            if c == col or abs(col - c) == abs(row - r) and r < row:
                 return False
         return True
 
@@ -50,7 +50,10 @@ def nqueens(N):
             None
         """
         if row == N:
-            print(" ".join(str(c + 1) for c in board))
+            ans = []
+            for r, c in enumerate(board):
+                ans.append([r, c])
+            print(ans)
             return
 
         for col in range(N):
