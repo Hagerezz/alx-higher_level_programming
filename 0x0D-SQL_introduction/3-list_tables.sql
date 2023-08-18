@@ -2,6 +2,5 @@
 
 USE mysql;
 
-set @dbname = '$database_name';
-
-SELECT table_name FROM information_schema.tables WHERE table_schema = @dbname;
+USE your_database_name;
+SHOW TABLES;
