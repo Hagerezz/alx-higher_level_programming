@@ -2,4 +2,5 @@
 
 USE mysql;
 
-SHOW TABLES;
+USE your_database_name;
+SELECT table_name FROM information_schema.tables WHERE table_schema = 'your_database_name';
