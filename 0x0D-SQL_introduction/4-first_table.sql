@@ -1,7 +1,7 @@
 -- create table
-USE mysql;
 
-CREATE TABLE first_table IF NOT EXISTS (
+USE mysql;
+CREATE TABLE IF NOT EXISTS first_table (
   id INT,
   name VARCHAR(256),
 );
