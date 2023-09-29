@@ -1,3 +1,3 @@
 #!/bin/bash
-#command
-curl -sI "$1" | grep -q "HTTP/1.1 200 OK" && curl -s "$1"
+# Usage: ./1-body.sh <URL>
+curl -s -o response.txt -w "%{http_code}" "$1" > /dev/null && grep -q "200" response.txt && tail -n +2 response.txt
