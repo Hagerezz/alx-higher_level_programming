@@ -1,3 +1,3 @@
 #!/bin/bash
 #command
-[ "$(curl -s -o /dev/null -w "%{http_code}" "$1")" -eq 200 ] && curl -s "$1"
+curl -sI "$1" | grep -q "HTTP/1.1 200 OK" && curl -s "$1"
