@@ -1,3 +1,3 @@
 --show first table
 
-SHOW table `first_table`;
+SHOW CREAT TABLE `first_table`;
