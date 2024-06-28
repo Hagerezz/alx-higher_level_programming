@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-takes in a URL, sends a request to the URL
-"""
-
+"""takes in a URL, sends a request to the URL"""
 if __name__ == "__main__":
     import sys
     import urllib.request
